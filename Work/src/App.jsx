@@ -5,8 +5,9 @@
 
 import bg from './header-background.webp'
 import me from './me.jpg'
-import React, { useState } from 'react';  
+import React, { useState,useEffect } from 'react';  
 import Swal from 'sweetalert2'
+import resume from './Updated Resume.pdf'
 
 function App() {
 
@@ -72,44 +73,87 @@ function App() {
     });  
   };  
 
+  const [isVisible, setIsVisible] = useState(false);  
+
+  const handleScroll = () => {  
+    if (window.scrollY > 300) {  
+      setIsVisible(true);  
+    } else {  
+      setIsVisible(false);  
+    }  
+  };  
+
+  const scrollToTop = () => {  
+    window.scrollTo({  
+      top: 0,  
+      behavior: 'smooth',  
+    });  
+  };  
+
+  useEffect(() => {  
+    window.addEventListener('scroll', handleScroll);  
+    return () => {  
+      window.removeEventListener('scroll', handleScroll);  
+    };  
+  }, );  
+
   return (
     <>
-    <header className="flex justify-center space-x-4 bg-gray-800 text-white p-4">
-      <a href="#about" className="hover:text-orange-500 cursor-pointer hover:delay-150">About</a>
-      <a href="#skills"className="hover:text-orange-500 cursor-pointer hover:delay-150">Skills</a>
-      <a href="#portfolio"className="hover:text-orange-500 cursor-pointer hover:delay-150">Portfolio</a>
+    <header className="flex justify-center space-x-4 bg-gray-800 bg-opacity-60 fixed w-full  text-white p-4">
+      <a href="#about" className="hover:text-orange-500 font-medium text-lg cursor-pointer hover:delay-150">About</a>
+      <a href="#skills"className="hover:text-orange-500 cursor-pointer text-lg  font-medium hover:delay-150">Skills</a>
+      <a href="#portfolio"className="hover:text-orange-500 text-lg  font-medium cursor-pointer hover:delay-150">Portfolio</a>
       {/* <p className="hover:text-orange-500 cursor-pointer hover:delay-150">Testimonials</p> */}
-      <a href="#contact"className="hover:text-orange-500 cursor-pointer hover:delay-150">Contact</a>
+      <a href="#contact"className="hover:text-orange-500 text-lg  font-medium cursor-pointer hover:delay-150">Contact</a>
     </header>
       {/* <h1>React App</h1> */}
-
     {/* <body> */}
     {/* first */}
-      <section className="flex text-center justify-center items-center text-white bg-cover bg-center h-screen" style={{backgroundImage: `url(${bg})`}}> 
-        <div className="text-center text-white bg-[#15364e] bg-opacity-70 p-8 rounded-lg w-[70%]">
+      {/* <section className="flex flex-col text-center justify-center items-center text-white bg-cover bg-center h-screen" style={{backgroundImage: `url(${bg})`}}> 
+        <div className="text-center items-center  justify-center text-white bg-[#15364e] bg-opacity-70 p-8 rounded-lg w-[70%]">
           <h1 className='text-6xl font-bold'>I'm Priyansh Tyagi.</h1>
-          <p className='my-8 text-xl'>Motivated and enthusiastic 2nd-year B.Tech Computer Science student with a strong foundation in front-end
+          <p className='my-8 w-[80%] justify-center item-center text-lg'>Motivated and enthusiastic 2nd-year B.Tech Computer Science student with a strong foundation in front-end
               development. Skilled in HTML, CSS, JavaScript and, React. Proficient in Python, C, and Java, with a proven ability
               to work collaboratively and independently. Eager to leverage skills in real-world projects and contribute to the
               technology industry with innovative and user-centric solutions
           </p>
           <div className="flex justify-center space-x-8">
-            <button className='border border-orange-500 rounded-full px-4 py-2 text-lg'>Resume</button>
-            <button className='border border-white rounded-full px-4 py-2 text-lg'>Contact</button>
+            <a href="/Updated Resume.pdf" download><button className='border border-orange-500 rounded-full px-4 py-2 text-lg'>Resume</button></a>
+            <a href="#contact"><button className='border border-white rounded-full px-4 py-2 text-lg'>Contact</button></a>
           </div>
         </div>
+      </section> */}
+
+      <section className="flex flex-col text-center justify-center items-center text-white bg-cover bg-center h-screen" style={{ backgroundImage: `url(${bg})` }}>  
+        <div className="bg-[#15364e] bg-opacity-70 p-8 rounded-lg w-[70%]  ">  
+          <h1 className='text-5xl font-bold'>I'm Priyansh Tyagi.</h1>  
+          <p className='my-8 text-lg text-gray-300 mx-auto w-[70%]'>  
+            Motivated and enthusiastic 2nd-year B.Tech Computer Science student with a strong foundation in front-end  
+            development. Skilled in HTML, CSS, JavaScript, and React. Proficient in Python, C, and Java, with a proven ability  
+            to work collaboratively and independently. Eager to leverage skills in real-world projects and contribute to the  
+            technology industry with innovative and user-centric solutions.  
+          </p>  
+          <div className="flex justify-center space-x-8">  
+            <a href="https://asset.cloudinary.com/dymfymgnm/a67786a0043b1d65f3250f30110b8fdc" target='blank' download>  
+              <button className='border border-orange-500 rounded-full px-4 py-2 text-lg'>Resume</button>  
+            </a>  
+            <a href="#contact">  
+              <button className='border border-white rounded-full px-4 py-2 text-lg'>Contact</button>  
+            </a>  
+          </div>  
+        </div>  
       </section>
 
       {/* About */}
       <section id="about" className="bg-gray-700 text-white p-12 flex justify-center items-center">  
         {/* <img className="rounded-full mr-8 w-[40%]" style={{backgroundImage: `url(${me})`}}/>  */}
         
-        <div className="flex justify-center items-center">    
-          <img src={me} alt="Priyansh Tyagi" className="w-[10%] rounded-lg" /> 
-          <div>  
+        <div className="flex justify-center items-center space-x-0">    
+          <img src={me} alt="Priyansh Tyagi" className="w-[20%] rounded-lg" /> 
+          <div className='w-[50%]'>  
             <h2 className="text-center text-3xl mb-6">About Me</h2>
             <div className="flex justify-center">
-              <p className="text-center mb-2 w-[40%] ">  
+              <p className="text-center my-4 pb-4 w-[80%] ">  
                 Use this bio section as your way of describing yourself and saying what you do,  
                 what technologies you like to use or feel most comfortable with, describing  
                 your personality, or whatever else you feel like throwing in.  
@@ -117,14 +161,14 @@ function App() {
             </div>
             <div className="flex justify-center space-x-4">  
               <ul className="list-disc ml-6">  
-                <li><strong>Location:</strong> Victoria, BC</li>  
-                <li><strong>Nationality:</strong> Canadian / Irish</li>  
-                <li><strong>Study:</strong> University of Victoria</li>   
+                <li><strong>Location:</strong> Agra, UttarPradesh</li>  
+                <li><strong>Nationality:</strong> Indian</li>  
+                <li><strong>Study:</strong> GLA University, MATHURA</li>   
               </ul>  
               <ul>
-                <li><strong>Age:</strong> 29</li>  
-                <li><strong>Interests:</strong> Motorcycles, Muay Thai, Banjos</li>  
-                <li><strong>Employment:</strong> Instant Domains, inc.</li> 
+                <li><strong>Age:</strong> 21</li>  
+                <li><strong>Interests:</strong> Reading Novels, Chess </li>  
+                {/* <li><strong>Employment:</strong> Instant Domains, inc.</li>  */}
               </ul>
             </div>
           </div>  
@@ -250,18 +294,44 @@ function App() {
             Send Message  
           </button>  
         </form>  
-        <div className="mt-8 text-center">  
+        {/* <div className="mt-8 text-center">  
           {/* <p>Here is a good spot for a message to your readers to let them know how best to reach out to you.</p>   */}
-          <p className="mt-2">Email: <a href="mailto:priyanshtyagi30@gmail.com" className="underline">priyanshtyagi30@gmail.com</a></p>  
+          {/* <p className="mt-2">Email: <a href="mailto:priyanshtyagi30@gmail.com" className="underline">priyanshtyagi30@gmail.com</a></p>  
           <p>Location: Agra Uttar Pradesh, India</p>  
           {/* Social Media Links */}  
-          <div className="flex justify-center space-x-4 mt-4">  
+          {/* <div className="flex justify-center space-x-4 mt-4">  
+            {/* <a href="https://twitter.com/tbakr" target="_blank" rel="noopener noreferrer">Twitter</a>   */}
+            {/* <a href="https://github.com/BroPriyansh" target="_blank" rel="noopener noreferrer">GitHub</a>  
+            <a href="https://www.instagram.com/brop1_2/" target="_blank" rel="noopener noreferrer">Instagram</a>  
+          </div>  
+        </div>    */}
+      </section>  
+
+      <footer className='bg-orange-500 text-white'>
+
+        <div className="mt-8 text-center flex items-center justify-center space-x-8 py-2">  
+          {/* <p>Here is a good spot for a message to your readers to let them know how best to reach out to you.</p>   */}
+          <p className="">Email <a href="mailto:priyanshtyagi30@gmail.com" className="underline"></a></p>  
+          {/* <p>Location: Agra Uttar Pradesh, India</p>   */}
+          {/* Social Media Links */}  
+          <div className="flex justify-center space-x-8">  
             {/* <a href="https://twitter.com/tbakr" target="_blank" rel="noopener noreferrer">Twitter</a>   */}
             <a href="https://github.com/BroPriyansh" target="_blank" rel="noopener noreferrer">GitHub</a>  
             <a href="https://www.instagram.com/brop1_2/" target="_blank" rel="noopener noreferrer">Instagram</a>  
+            <a href="https://www.linkedin.com/in/priyansh-tyagi-715589347/" target="_blank" rel="noopener noreferrer">LinkedIn</a>  
           </div>  
-        </div>  
-      </section>    
+        </div>
+      </footer>
+
+      {isVisible && (  
+        <button  
+          onClick={scrollToTop}  
+          className="fixed bottom-5 right-5 text-2xl bg-orange-500 text-white rounded-full p-4 shadow-lg hover:bg-orange-600 transition-all"  
+          aria-label="Scroll to top"  
+        >  
+          ↑  
+        </button>  
+      )}    
     {/* </body> */}
     </>
   )
