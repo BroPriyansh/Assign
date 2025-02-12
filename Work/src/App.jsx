@@ -1,19 +1,13 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
 
 import bg from './header-background.webp'
 import me from './me.jpg'
 import React, { useState,useEffect } from 'react';  
 import Swal from 'sweetalert2'
-import resume from './Updated Resume.pdf'
 
 function App() {
 
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });  
 
-  // const Skills = () => {  
     const skillCategories = [  
       {  
         title: 'Spoken languages',  
@@ -65,7 +59,6 @@ function App() {
       text: 'Thank you for reaching out.',
     });
 
-    // Here you can also send the form data to a server or an API.  
     setFormData({  
       name: '',  
       email: '',  
@@ -103,26 +96,8 @@ function App() {
       <a href="#about" className="hover:text-orange-500 font-medium text-lg cursor-pointer hover:delay-150">About</a>
       <a href="#skills"className="hover:text-orange-500 cursor-pointer text-lg  font-medium hover:delay-150">Skills</a>
       <a href="#portfolio"className="hover:text-orange-500 text-lg  font-medium cursor-pointer hover:delay-150">Portfolio</a>
-      {/* <p className="hover:text-orange-500 cursor-pointer hover:delay-150">Testimonials</p> */}
       <a href="#contact"className="hover:text-orange-500 text-lg  font-medium cursor-pointer hover:delay-150">Contact</a>
     </header>
-      {/* <h1>React App</h1> */}
-    {/* <body> */}
-    {/* first */}
-      {/* <section className="flex flex-col text-center justify-center items-center text-white bg-cover bg-center h-screen" style={{backgroundImage: `url(${bg})`}}> 
-        <div className="text-center items-center  justify-center text-white bg-[#15364e] bg-opacity-70 p-8 rounded-lg w-[70%]">
-          <h1 className='text-6xl font-bold'>I'm Priyansh Tyagi.</h1>
-          <p className='my-8 w-[80%] justify-center item-center text-lg'>Motivated and enthusiastic 2nd-year B.Tech Computer Science student with a strong foundation in front-end
-              development. Skilled in HTML, CSS, JavaScript and, React. Proficient in Python, C, and Java, with a proven ability
-              to work collaboratively and independently. Eager to leverage skills in real-world projects and contribute to the
-              technology industry with innovative and user-centric solutions
-          </p>
-          <div className="flex justify-center space-x-8">
-            <a href="/Updated Resume.pdf" download><button className='border border-orange-500 rounded-full px-4 py-2 text-lg'>Resume</button></a>
-            <a href="#contact"><button className='border border-white rounded-full px-4 py-2 text-lg'>Contact</button></a>
-          </div>
-        </div>
-      </section> */}
 
       <section className="flex flex-col text-center justify-center items-center text-white bg-cover bg-center h-screen" style={{ backgroundImage: `url(${bg})` }}>  
         <div className="bg-[#15364e] bg-opacity-70 p-8 rounded-lg w-[70%]  ">  
@@ -146,7 +121,7 @@ function App() {
 
       {/* About */}
       <section id="about" className="bg-gray-700 text-white p-12 flex justify-center items-center">  
-        {/* <img className="rounded-full mr-8 w-[40%]" style={{backgroundImage: `url(${me})`}}/>  */}
+
         
         <div className="flex justify-center items-center space-x-0">    
           <img src={me} alt="Priyansh Tyagi" className="w-[20%] rounded-lg" /> 
@@ -168,7 +143,6 @@ function App() {
               <ul>
                 <li><strong>Age:</strong> 21</li>  
                 <li><strong>Interests:</strong> Reading Novels, Chess </li>  
-                {/* <li><strong>Employment:</strong> Instant Domains, inc.</li>  */}
               </ul>
             </div>
           </div>  
@@ -249,15 +223,6 @@ function App() {
       </div>  
     </section>
 
-    {/* Testimonials
-      <section className="bg-gray-900 text-white p-12">  
-        <div className="max-w-4xl mx-auto text-center">  
-          <blockquote className="bg-gray-800 p-6 rounded-lg shadow-lg">  
-            <p>"Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details."</p>  
-            <footer className="mt-4 text-lg">-- Jane Doe</footer>  
-          </blockquote>  
-        </div>  
-      </section> */}
 
       {/* Contact */}
       <section id="contact" className="bg-white text-black p-12">  
@@ -294,28 +259,16 @@ function App() {
             Send Message  
           </button>  
         </form>  
-        {/* <div className="mt-8 text-center">  
-          {/* <p>Here is a good spot for a message to your readers to let them know how best to reach out to you.</p>   */}
-          {/* <p className="mt-2">Email: <a href="mailto:priyanshtyagi30@gmail.com" className="underline">priyanshtyagi30@gmail.com</a></p>  
-          <p>Location: Agra Uttar Pradesh, India</p>  
-          {/* Social Media Links */}  
-          {/* <div className="flex justify-center space-x-4 mt-4">  
-            {/* <a href="https://twitter.com/tbakr" target="_blank" rel="noopener noreferrer">Twitter</a>   */}
-            {/* <a href="https://github.com/BroPriyansh" target="_blank" rel="noopener noreferrer">GitHub</a>  
-            <a href="https://www.instagram.com/brop1_2/" target="_blank" rel="noopener noreferrer">Instagram</a>  
-          </div>  
-        </div>    */}
       </section>  
 
       <footer className='bg-orange-500 text-white'>
 
         <div className="mt-8 text-center flex items-center justify-center space-x-8 py-2">  
-          {/* <p>Here is a good spot for a message to your readers to let them know how best to reach out to you.</p>   */}
+
           <p className="">Email <a href="mailto:priyanshtyagi30@gmail.com" className="underline"></a></p>  
-          {/* <p>Location: Agra Uttar Pradesh, India</p>   */}
-          {/* Social Media Links */}  
+  
           <div className="flex justify-center space-x-8">  
-            {/* <a href="https://twitter.com/tbakr" target="_blank" rel="noopener noreferrer">Twitter</a>   */}
+
             <a href="https://github.com/BroPriyansh" target="_blank" rel="noopener noreferrer">GitHub</a>  
             <a href="https://www.instagram.com/brop1_2/" target="_blank" rel="noopener noreferrer">Instagram</a>  
             <a href="https://www.linkedin.com/in/priyansh-tyagi-715589347/" target="_blank" rel="noopener noreferrer">LinkedIn</a>  
@@ -332,7 +285,6 @@ function App() {
           ↑  
         </button>  
       )}    
-    {/* </body> */}
     </>
   )
 }
