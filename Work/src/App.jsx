@@ -1,5 +1,7 @@
 
 import bg from './header-background.webp'
+import i1 from './Work1.png'
+import i2 from './Work2.png'
 import me from './me.jpg'
 import React, { useState,useEffect } from 'react';  
 import Swal from 'sweetalert2'
@@ -210,14 +212,14 @@ function App() {
 
     {/* Portfolio */}  
     <section id="portfolio" className="bg-gray-900 text-white p-12">  
-      <h2 className="text-center text-3xl mb-6">Check out some of my work</h2>  
+      <h2 className="text-center text-3xl mb-16">Check out some of my work</h2>  
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">  
         <div className="relative">  
-          <img src="" alt="Project Unavailable" className="w-full h-auto rounded-lg" />  
+          <a href="https://github.com/BroPriyansh/Demo" target='blank'><img src={i1} alt="Project Unavailable" className="bg-cover rounded-lg hover cursor-pointer"/></a>
           <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2">Project title 1</div>  
         </div>  
         <div className="relative">  
-          <img src="" alt="Project Unavailable" className="w-full h-auto rounded-lg" />  
+          <a href="https://github.com/BroPriyansh/FrontendWork1" target='blank'><img src={i2}  alt="Project Unavailable" className="w-full rounded-lg hover cursor-pointer" /></a>  
           <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2">Project title 2</div>  
         </div>
       </div>  
@@ -280,11 +282,10 @@ function App() {
         <button  
           onClick={scrollToTop}  
           className="fixed bottom-5 right-5 text-2xl bg-orange-500 text-white rounded-full p-4 shadow-lg hover:bg-orange-600 transition-all"  
-          aria-label="Scroll to top"  
         >  
           ↑  
         </button>  
-      )}    
+      )}     
     </>
   )
 }
