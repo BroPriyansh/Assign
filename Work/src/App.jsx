@@ -134,7 +134,7 @@ function App() {
       </header>
 
       <section className="flex flex-col text-center justify-center items-center text-white bg-cover bg-center h-screen" style={{ backgroundImage: `url(${bg})` }}>
-        <div className="bg-[#15364e] bg-opacity-70 p-8 rounded-lg w-[70%]">
+        <div className="bg-[#15364e] bg-opacity-70 p-8 rounded-lg sm:w-[70%]">
           <motion.h1
             className='text-5xl font-bold'
             initial="hidden"
@@ -186,15 +186,16 @@ function App() {
         variants={sectionVariants}
         viewport={{ once: true }}
       >
-        <div className="flex justify-center items-center space-x-0">
-          <img src={me} alt="Priyansh Tyagi" className="w-[20%] rounded-lg" />
-          <div className='w-[50%]'>
+        <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-8">
+          <img src={me} alt="Priyansh Tyagi" className="w-[20%] max-sm:w-[100%] rounded-lg" />
+          <div className='w-[50%] max-sm:w-[100%]'>
             <h2 className="text-center text-3xl mb-6">About Me</h2>
             <div className="flex justify-center">
-              <p className="text-center my-4 pb-4 w-[80%] ">
-                Use this bio section as your way of describing yourself and saying what you do,
-                what technologies you like to use or feel most comfortable with, describing
-                your personality, or whatever else you feel like throwing in.
+              <p className="text-center my-4 pb-4 w-[80%] max-sm:w-[100%]">
+              Motivated and enthusiastic 2nd-year B.Tech Computer Science student with a strong foundation in front-end
+              development. Skilled in HTML, CSS, JavaScript and, React. Proficient in Python, C, and Java, with a proven ability
+              to work collaboratively and independently. Eager to leverage skills in real-world projects and contribute to the
+              technology industry with innovative and user-centric solutions.
               </p>
             </div>
             <div className="flex justify-center space-x-4">
@@ -221,7 +222,7 @@ function App() {
         variants={sectionVariants}
         viewport={{ once: true }}
       >
-        <div className='flex w-[70%] space-x-20 ml-[20%]'>
+        <div className='flex sm:w-[70%] sm:space-x-20 sm:ml-[20%] space-x-8'>
           <div>
             <h1 className="text-center text-3xl mb-6">Education</h1>
             <hr />
@@ -237,7 +238,7 @@ function App() {
           </div>
         </div>
         <hr className='mt-8' />
-        <div className='flex w-[70%] space-x-20 mt-8 ml-[20%]'>
+        <div className='flex sm:w-[70%] sm:space-x-20 sm:ml-[20%] mt-8 space-x-8'>
           <div>
             <h1 className="text-center text-3xl mb-6">Experience</h1>
             <hr />
@@ -261,7 +262,7 @@ function App() {
       >
         <h2 className="text-center text-3xl mb-6">Skills</h2>
 
-        <div className="w-[60%] mx-auto flex flex-wrap gap-x-20 gap-y-10">
+        <div className="min-sm:w-[60%] mx-auto flex flex-wrap gap-x-20 gap-y-10">
           {skillCategories.map((category, index) => (
             <div key={index} className="flex-1 min-w-[250px] max-w-[45%] mb-8">
               <h3 className="text-xl font-bold mb-4">{category.title}</h3>
@@ -350,10 +351,10 @@ function App() {
       </motion.section>
 
       <footer className='bg-orange-500 text-white'>
-        <div className="mt-8 text-center flex items-center justify-center space-x-8 py-2">
+        <div className="mt-8 text-center sm:flex items-center justify-center space-x-8 py-2">
           <p className="">Email <a href="mailto:priyanshtyagi30@gmail.com" className="underline">priyanshtyagi30@gmail.com</a></p>
 
-          <div className="flex justify-center space-x-8">
+          <div className="sm:flex justify-center text-center items-center space-x-8">
             <a href="https://github.com/BroPriyansh" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.instagram.com/brop1_2/" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://www.linkedin.com/in/priyansh-tyagi-715589347/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
