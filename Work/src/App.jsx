@@ -126,7 +126,7 @@ function App() {
 
   return (
     <>
-      <header className="flex justify-center space-x-4 bg-gray-800 bg-opacity-60 fixed w-full text-white p-4">
+      <header className="flex justify-center space-x-16 bg-gray-800 bg-opacity-60 z-10 fixed w-full text-white p-4">
         <a href="#about" className="hover:text-orange-500 font-medium text-lg cursor-pointer hover:delay-150">About</a>
         <a href="#skills" className="hover:text-orange-500 cursor-pointer text-lg font-medium hover:delay-150">Skills</a>
         <a href="#portfolio" className="hover:text-orange-500 text-lg font-medium cursor-pointer hover:delay-150">Portfolio</a>
