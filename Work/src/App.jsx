@@ -323,7 +323,7 @@ function App() {
             placeholder="Name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full p-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
             required
           />
           <input
@@ -332,7 +332,7 @@ function App() {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full p-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
             required
           />
           <textarea
@@ -340,7 +340,7 @@ function App() {
             placeholder="Message"
             value={formData.message}
             onChange={handleChange}
-            className="w-full p-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full p-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
             rows="5"
             required
           ></textarea>
