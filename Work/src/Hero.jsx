@@ -21,11 +21,11 @@ const Hero = () => {
   };
 
     const [displayText, setDisplayText] = useState("Priyansh Tyagi.");
-  const texts = ["Priyansh Tyagi.", "Frontend Developer." , "React Enthusiast." , "Tech Lover." , "Problem Solver." , "Student."];
+  const texts = ["Priyansh Tyagi.", "a Frontend Developer." , "a React Enthusiast." , "a Tech Lover." , "a Problem Solver." , "a Student."];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDisplayText((prev) => (prev === texts[0] ? texts[1] : texts[0]));
+      setDisplayText((prev) => (prev === texts[0] ? texts[1] : prev === texts[1] ? texts[2] : prev === texts[2] ? texts[3] : prev === texts[3] ? texts[4] : prev === texts[4] ? texts[5] : texts[0]));
     }, 3000);
 
     return () => clearInterval(interval); 
