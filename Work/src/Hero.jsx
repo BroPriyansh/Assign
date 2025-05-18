@@ -45,7 +45,7 @@ const Hero = () => {
             technology industry with innovative and user-centric solutions.
           </motion.p>
           <div className="flex justify-center space-x-8">
-            <motion.a href="https://asset.cloudinary.com/dymfymgnm/a67786a0043b1d65f3250f30110b8fdc" target='blank' download initial="hidden" whileInView="visible" variants={buttonVariants}>
+            <motion.a href="https://asset.cloudinary.com/dymfymgnm/0204b511fd3a990afeb5056dc1fb3314" target='blank' download initial="hidden" whileInView="visible" variants={buttonVariants}>
               <button className='border border-orange-500 rounded-full px-4 py-2 text-lg'>Resume</button>
             </motion.a>
             <motion.a
