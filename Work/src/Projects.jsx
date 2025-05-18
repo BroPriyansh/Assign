@@ -19,7 +19,7 @@ const Projects = () => {
         variants={sectionVariants}
         viewport={{ once: true }}
       >
-        <h2 className="text-center text-3xl mb-16">Check out some of my work</h2>
+        <h2 className="text-center text-3xl mb-16">Check happy out some of my work</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <div className="relative">
             <a href="https://github.com/BroPriyansh/Demo" target='blank'><img src={i1} alt="Project Unavailable" className="bg-cover rounded-lg hover cursor-pointer" /></a>
