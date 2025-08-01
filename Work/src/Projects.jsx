@@ -1,7 +1,8 @@
 import i1 from './Work1.png';
 import i2 from './Work2.png';
 import i3 from './Work3.png';
-import i4 from './Work4.png';
+// import i4 from './Work4.png';
+import i5 from './WriteMind.png';
 import { motion } from 'framer-motion';
 
 const projectsData = [
@@ -21,7 +22,7 @@ const projectsData = [
     description: "An elegant e-commerce platform with modern design patterns and seamless user experience. Features product catalog and shopping cart functionality.",
     image: i2,
     github: "https://github.com/BroPriyansh/FrontendWork1",
-    live: null,
+    live: "https://divueens-frontend.vercel.app/",
     technologies: ["React", "CSS", "JavaScript"],
     category: "E-commerce"
   },
@@ -31,19 +32,19 @@ const projectsData = [
     description: "A comprehensive dashboard for students to manage their academic progress, assignments, and course materials with intuitive navigation.",
     image: i3,
     github: "https://github.com/BroPriyansh/Dash",
-    live: null,
+    live: "https://dash-mu-gray.vercel.app/",
     technologies: ["React", "JavaScript", "CSS"],
     category: "Dashboard"
   },
   {
     id: 4,
-    title: "Scheduler",
-    description: "A smart scheduling application that helps users organize their time efficiently with calendar integration and task management.",
-    image: i4,
-    github: "https://github.com/BroPriyansh/schedul",
-    live: null,
-    technologies: ["React", "JavaScript", "CSS"],
-    category: "Productivity"
+    title: "WriteMind",
+    description: "A personal blogging platform with a clean design, allowing users to share their thoughts and experiences. Features include post creation and commenting.",
+    image: i5,
+    github: "https://github.com/BroPriyansh/BlogSite",
+    live: "https://priyansh-blog-site.vercel.app/",
+    technologies: ["React", "CSS", "JavaScript","Firebase"],
+    category: "Blogging"
   }
 ];
 
