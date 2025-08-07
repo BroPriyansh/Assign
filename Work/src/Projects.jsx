@@ -21,7 +21,7 @@ const projectsData = [
     title: "Divueens",
     description: "An elegant e-commerce platform with modern design patterns and seamless user experience. Features product catalog and shopping cart functionality.",
     image: i2,
-    github: "https://github.com/BroPriyansh/FrontendWork1",
+    github: null,
     live: "https://divueens-frontend.vercel.app/",
     technologies: ["React", "CSS", "JavaScript"],
     category: "E-commerce"
