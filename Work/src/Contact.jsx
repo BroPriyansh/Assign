@@ -93,7 +93,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="relative min-h-screen bg-gradient-to-br from-gray-900 via-orange-900/40 to-purple-900/50 py-20 overflow-hidden">
+    <section id="contact" className="relative min-h-screen bg-gradient-to-br from-gray-900 via-blue-900/40 to-slate-900/50 py-12 sm:py-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-10 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl"></div>
@@ -102,7 +102,7 @@ const Contact = () => {
       </div>
 
       <motion.div 
-        className="relative z-10 max-w-7xl mx-auto px-4"
+        className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -110,58 +110,58 @@ const Contact = () => {
       >
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
           variants={itemVariants}
         >
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent mb-3 sm:mb-4 px-2">
             Let&apos;s Connect
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-purple-500 mx-auto rounded-full mb-4"></div>
-          <p className="text-white text-lg max-w-2xl mx-auto font-medium">
-            Ready to start a project or just want to chat? I&apos;d love to hear from you. Send me a message and I&apos;ll respond as soon as possible.
+          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-3 sm:mb-4"></div>
+          <p className="text-white text-sm sm:text-base lg:text-lg max-w-2xl mx-auto px-4">
+            Ready to start a project or just want to chat? I&apos;d love to hear from you.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
           {/* Contact Information */}
           <motion.div 
-            className="space-y-8"
+            className="space-y-4 sm:space-y-6 lg:space-y-8"
             variants={itemVariants}
           >
-                         <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-8 shadow-2xl">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <span className="text-3xl">💬</span>
+            <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2">
+                <span className="text-xl sm:text-2xl lg:text-3xl">💬</span>
                 Get in Touch
               </h3>
-              <p className="text-white mb-8 leading-relaxed font-medium">
-                I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Let&apos;s create something amazing together!
+              <p className="text-white mb-4 sm:mb-6 lg:mb-8 leading-relaxed text-sm sm:text-base">
+                I&apos;m always open to discussing new projects and opportunities!
               </p>
               
-              <div className="space-y-6">
+              <div className="space-y-3 sm:space-y-4 lg:space-y-6">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={info.title}
-                    className="flex items-center gap-4 group"
+                    className="flex items-start gap-3 sm:gap-4 group"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl lg:text-2xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                       {info.icon}
                     </div>
-                    <div className="flex-1">
-                      <h4 className="text-white font-semibold">{info.title}</h4>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-white font-semibold text-sm sm:text-base">{info.title}</h4>
                       {info.link ? (
                         <a 
                           href={info.link} 
-                          className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                          className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-xs sm:text-sm lg:text-base break-all"
                           target={info.link.startsWith('http') ? '_blank' : undefined}
                           rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-gray-300">{info.value}</p>
+                        <p className="text-gray-300 text-xs sm:text-sm lg:text-base">{info.value}</p>
                       )}
                     </div>
                   </motion.div>
@@ -170,16 +170,16 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-                         <motion.div 
-               className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-8 shadow-2xl"
+            <motion.div 
+               className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl"
                variants={itemVariants}
              >
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <span className="text-3xl">🌐</span>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2">
+                <span className="text-xl sm:text-2xl lg:text-3xl">🌐</span>
                 Follow Me
               </h3>
-              <div className="flex gap-4">
-                                 {[
+              <div className="flex gap-2 sm:gap-3 lg:gap-4">
+                {[
                    { name: 'GitHub', icon: '📚', url: 'https://github.com/BroPriyansh' },
                    { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com/in/priyansh-tyagi-3972442b0' },
                    { name: 'Instagram', icon: '📷', url: 'https://www.instagram.com/brop1_2/' }
@@ -189,7 +189,7 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-purple-500/20 border border-white/10 rounded-2xl flex items-center justify-center text-2xl hover:bg-white/10 hover:scale-110 transition-all duration-300"
+                    className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-white/10 rounded-xl sm:rounded-2xl flex items-center justify-center text-lg sm:text-xl lg:text-2xl hover:bg-white/10 hover:scale-110 transition-all duration-300"
                     whileHover={{ y: -5 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -201,58 +201,58 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Form */}
-                     <motion.div 
+          <motion.div 
              variants={formVariants}
-             className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-8 shadow-2xl"
+             className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl"
            >
-            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-              <span className="text-3xl">✉️</span>
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2">
+              <span className="text-xl sm:text-2xl lg:text-3xl">✉️</span>
               Send Message
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
-                <label className="block text-white font-medium mb-2">Name</label>
+                <label className="block text-white font-medium mb-1 sm:mb-2 text-sm sm:text-base">Name</label>
                 <input 
                   type="text" 
                   name="name" 
                   placeholder="Your name" 
                   value={formData.name} 
                   onChange={handleChange} 
-                  className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
+                  className="w-full p-3 sm:p-4 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
                   required
                 />
               </div>
               
               <div>
-                <label className="block text-white font-medium mb-2">Email</label>
+                <label className="block text-white font-medium mb-1 sm:mb-2 text-sm sm:text-base">Email</label>
                 <input 
                   type="email" 
                   name="email" 
                   placeholder="your.email@example.com" 
                   value={formData.email} 
                   onChange={handleChange} 
-                  className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
+                  className="w-full p-3 sm:p-4 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
                   required
                 />
               </div>
               
               <div>
-                <label className="block text-white font-medium mb-2">Message</label>
+                <label className="block text-white font-medium mb-1 sm:mb-2 text-sm sm:text-base">Message</label>
                 <textarea 
                   name="message" 
                   placeholder="Tell me about your project..." 
                   value={formData.message} 
                   onChange={handleChange} 
-                  rows="5"
-                  className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 resize-none"
+                  rows="4"
+                  className="w-full p-3 sm:p-4 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none text-sm sm:text-base"
                   required
                 ></textarea>
               </div>
               
               <motion.button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-orange-500 to-purple-500 text-white font-semibold py-4 px-8 rounded-xl hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg sm:rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 disabled={isSubmitting}

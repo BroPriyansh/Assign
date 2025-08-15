@@ -3,6 +3,7 @@ import i2 from './Work2.png';
 import i3 from './Work3.png';
 // import i4 from './Work4.png';
 import i5 from './WriteMind.png';
+import i6 from './DocsQA.png';
 import { motion } from 'framer-motion';
 
 const projectsData = [
@@ -44,6 +45,16 @@ const projectsData = [
     github: "https://github.com/BroPriyansh/BlogSite",
     live: "https://priyansh-blog-site.vercel.app/",
     technologies: ["React", "CSS", "JavaScript","Firebase"],
+    category: "Blogging"
+  },
+  {
+    id: 5,
+    title: "DocsQA",
+    description: "An end-to-end intelligent document assistant that allows users to upload PDF business documents, receive a real-time summary, ask natural language questions, and view the source snippets from which answers are retrieved — with optional highlighting.",
+    image: i6,
+    github: "https://github.com/BroPriyansh/AI-Hack",
+    live: "https://ai-hack-olxwtaxj79mi3eeaz3sfzl.streamlit.app/",
+    technologies: ["Python", "Streamlit", "AI","LangChain","HuggingFace"],
     category: "Blogging"
   }
 ];

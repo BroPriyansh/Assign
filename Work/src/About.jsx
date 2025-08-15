@@ -131,7 +131,7 @@ const About = () => {
                 Who I Am
               </h3>
               <p className="text-white leading-relaxed text-lg font-medium">
-                Motivated and enthusiastic 2nd-year B.Tech Computer Science student with a strong foundation in front-end
+                Motivated and enthusiastic 3rd-year B.Tech Computer Science student with a strong foundation in front-end
                 development. Skilled in HTML, CSS, JavaScript and React. Proficient in Python, C, and Java, with a proven ability
                 to work collaboratively and independently. Eager to leverage skills in real-world projects and contribute to the
                 technology industry with innovative and user-centric solutions.
