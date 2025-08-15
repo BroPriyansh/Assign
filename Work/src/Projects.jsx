@@ -55,7 +55,7 @@ const projectsData = [
     github: "https://github.com/BroPriyansh/AI-Hack",
     live: "https://ai-hack-olxwtaxj79mi3eeaz3sfzl.streamlit.app/",
     technologies: ["Python", "Streamlit", "AI","LangChain","HuggingFace"],
-    category: "Blogging"
+    category: "AI"
   }
 ];
 
